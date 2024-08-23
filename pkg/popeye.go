@@ -474,7 +474,7 @@ func (p *Popeye) dump(printHeader bool, asset string) error {
 		errs = errors.Join(errs, p.dumpStd(printHeader))
 	}
 
-	if p.flags.OutputFormat() != report.PromFormat && config.IsStrSet(p.flags.PushGateway.URL) {
+	if config.IsStrSet(p.flags.PushGateway.URL) {
 		if config.IsStrSet(p.flags.S3.Bucket) {
 			asset = *p.flags.S3.Bucket + "/" + filepath.Join(p.clusterPath(), p.scanFileName())
 		}

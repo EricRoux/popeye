@@ -106,7 +106,7 @@ func initPopeyeFlags() {
 
 	rootCmd.Flags().StringVarP(flags.Output, "out", "o",
 		"standard",
-		"Specify the output type (standard, jurassic, yaml, json, html, junit, score)",
+		"Specify the output type (standard, jurassic, yaml, json, html, junit, score, prometheus)",
 	)
 
 	rootCmd.Flags().BoolVarP(flags.Save, "save", "",
